@@ -1,0 +1,215 @@
+
+
+	n Function snd_soc_cnew 
+	n Function snd_soc_cnew 
+	in Function snd_soc_cnew 
+	in Function snd_soc_cnew 
+	in Function check_clk_sys 
+	in Function check_clk_sys 
+	in Function soc_new_pcm 
+	n Function soc_new_pcm .. rtd->dai_link->stream_name..Sec_Dai
+	n Function soc_new_pcm ..  codec_dai->name = wmxxx4-aif1 .. num=0
+	 registered pcm #0 Sec_Dai wmxxx4-aif1-0
+	in Function snd_pcm_new 
+	in Function _snd_pcm_new 
+	in Function snd_pcm_new_stream 
+	in Function snd_pcm_stream_proc_init ..name=
+	in Function snd_pcm_new_stream. substream->name=subdevice #0 
+	in Function snd_pcm_substream_proc_init 
+	in Function snd_pcm_new_stream 
+	in Function snd_pcm_stream_proc_init ..name=sub0
+	in Function snd_pcm_new_stream. substream->name=subdevice #0 
+	in Function snd_pcm_substream_proc_init 
+	in Function snd_device_new 
+	in Function idma_new 
+	in Function soc_probe_dai_link 
+	robe U-------------AP WM1811 dai link 1 late 2
+	 in Function soc_post_component_init 
+	 in Function soc_new_pcm 
+	in Function soc_new_pcm .. rtd->dai_link->stream_name..Voice Tx/Rx
+	in Function soc_new_pcm ..  codec_dai->name = wmxxx4-aif2 .. num=1
+	  registered pcm #1 Voice Tx/Rx wmxxx4-aif2-1
+	 in Function snd_pcm_new 
+	 in Function _snd_pcm_new 
+	 in Function snd_pcm_new_stream 
+	 in Function snd_pcm_stream_proc_init ..name=
+	 in Function snd_pcm_new_stream. substream->name=subdevice #0 
+	 in Function snd_pcm_substream_proc_init 
+	 in Function snd_pcm_new_stream 
+	 in Function snd_pcm_stream_proc_init ..name=sub0
+	 in Function snd_pcm_new_stream. substream->name=subdevice #0 
+	 in Function snd_pcm_substream_proc_init 
+	 in Function snd_device_new 
+	 in Function soc_probe_dai_link 
+	probe U-------------AP WM1811 dai link 2 late 2
+	 in Function soc_post_component_init 
+	 in Function soc_new_pcm 
+	in Function soc_new_pcm .. rtd->dai_link->stream_name..BT Tx/Rx
+	in Function soc_new_pcm ..  codec_dai->name = wmxxx4-aif3 .. num=2
+	  registered pcm #2 BT Tx/Rx wmxxx4-aif3-2
+	 in Function snd_pcm_new 
+	 in Function _snd_pcm_new 
+	 in Function snd_pcm_new_stream 
+	 in Function snd_pcm_stream_proc_init ..name=€Š ï r.ï
+	 in Function snd_pcm_new_stream. substream->name=subdevice #0 
+	 in Function snd_pcm_substream_proc_init 
+	 in Function snd_pcm_new_stream 
+	 in Function snd_pcm_stream_proc_init ..name=sub0
+	 in Function snd_pcm_new_stream. substream->name=subdevice #0 
+	 in Function snd_pcm_substream_proc_init 
+	 in Function snd_device_new 
+	 in Function soc_probe_dai_link 
+	probe U-------------AP WM1811 dai link 3 late 2
+	 in Function soc_post_component_init 
+	 in Function soc_new_pcm 
+	in Function soc_new_pcm .. rtd->dai_link->stream_name..Pri_Dai
+	in Function soc_new_pcm ..  codec_dai->name = wmxxx4-aif1 .. num=3
+	  registered pcm #3 Pri_Dai wmxxx4-aif1-3
+	 in Function snd_pcm_new 
+	 in Function _snd_pcm_new 
+	 in Function snd_pcm_new_stream 
+	 in Function snd_pcm_stream_proc_init ..name=
+	 in Function snd_pcm_new_stream. substream->name=subdevice #0 
+	 in Function snd_pcm_substream_proc_init 
+	 in Function snd_pcm_new_stream 
+	 in Function snd_pcm_stream_proc_init ..name=sub0
+	 in Function snd_pcm_new_stream. substream->name=subdevice #0 
+	 in Function snd_pcm_substream_proc_init 
+	 in Function snd_device_new 
+	 in Function snd_soc_dapm_link_dai_widgets 
+	 in Function snd_soc_add_controls 
+	 in Function snd_soc_cnew 
+	 in Function snd_soc_cnew 
+	 in Function snd_soc_cnew 
+	 in Function snd_soc_cnew 
+	 in Function snd_soc_cnew 
+	 in Function snd_soc_dapm_add_route 
+	 in Function snd_soc_dapm_add_route 
+	 in Function snd_soc_dapm_add_route 
+	 in Function snd_soc_dapm_add_route 
+	 in Function snd_soc_dapm_add_route 
+	 in Function snd_soc_dapm_add_route 
+	 in Function snd_soc_dapm_add_route 
+	 in Function snd_soc_dapm_add_route 
+	 in Function snd_soc_dapm_add_route 
+	 in Function Plat-ti_late_probe 
+	 in Function wmxxx4_set_dai_sysclk 
+	 in Function configure_clock 
+	 in Function snd_soc_add_codec_controls 
+	 in Function snd_soc_add_controls 
+	 in Function snd_soc_cnew 
+	 in Function snd_soc_cnew 
+	 in Function snd_soc_cnew 
+	 in Function snd_soc_cnew 
+	 in Function snd_soc_cnew 
+	 in Function snd_soc_cnew 
+	 in Function snd_soc_cnew 
+	 in Function Plat-ti_micd_set_rate 
+	 in Function snd_device_new 
+	 in Function wm8958_mic_detect 
+	 in Function wm1811_jackdet_set_mode 
+	 in Function check_clk_sys 
+	 in Function clk_sys_event 
+	 in Function configure_clock 
+	 in Function clk_sys_event 
+	Before snd_card_register  in Function snd_soc_instantiate_card 
+	 in Function snd_device_register_all 
+	 in Function snd_kernel_minor 
+	 in Function snd_device_new 
+	 in Function snd_device_register 
+	 in Function snd_kernel_minor 
+	 in Function snd_device_new 
+	 in Function snd_device_register 
+	 in Function snd_kernel_minor 
+	 in Function snd_device_new 
+	 in Function snd_device_register 
+	 in Function snd_kernel_minor 
+	 in Function snd_device_new 
+	 in Function snd_device_register 
+	 in Function snd_kernel_minor 
+	 in Function snd_device_new 
+	 in Function snd_device_register 
+	 in Function snd_kernel_minor 
+	 in Function snd_device_new 
+	 in Function snd_device_register 
+	 in Function snd_kernel_minor 
+	 in Function snd_device_new 
+	 in Function snd_device_register 
+	 in Function snd_kernel_minor 
+	 in Function snd_device_new 
+	 in Function snd_device_register 
+	 in Function snd_kernel_minor 
+	  in Function wm1811_jackdet_irq 
+	  in Function wm1811_jackdet_set_mode 
+	  in Function snd_open 
+	  in Function set_aif2_mode ..aif2 mode : Master 
+	  in Function set_aif2_mute_status 
+	  in Function set_aif2_mute_status 
+	  in Function snd_open 
+	  in Function snd_pcm_playback_open 
+	  in Function snd_pcm_open 
+	  in Function soc_pcm_open 
+	  in Function soc_pcm_open ..Interface Plat-ti-i2s.4: .
+	  in Function i2s_startup 
+	  in Function i2s_enable 
+	  in Function snd_soc_set_runtime_hwparams 
+	 asoc:  codec_dai->name wmxxx4-aif1 <->i  cpu_dai->name Plat-ti-i2s.4 info:
+	 asoc: rate mask runtime->hw.rates 0x7fe
+	asoc: runtime->hw.channels_min ch 2 max ch 2
+	asoc: min rate 8000 max rate 96000
+	  in Function snd_pcm_hw_constraints_complete 
+	  in Function snd_pcm_common_ioctl1 
+	  in Function snd_pcm_info_user 
+	  in Function snd_pcm_info 
+	  in Function snd_pcm_info 
+	  in Function snd_pcm_info ..info->card =0
+	  in Function snd_pcm_info ..info->name =
+	  in Function snd_pcm_common_ioctl1 
+	  in Function snd_pcm_hw_params 
+	  in Function snd_pcm_hw_refine 
+	 0000000000000008
+	 0000000000000004
+	 0000000000000001
+	  in Function snd_pcm_hw_refine 
+	  in Function snd_pcm_hw_refine 
+	  in Function soc_pcm_hw_params 
+	  in Function soc_pcm_hw_params.. codec_dai->name=wmxxx4-aif1 
+	  in Function Plat-ti_wm1811_aif1_hw_params ..sound/soc/palt/..
+	  in Function wmxxx4_set_dai_fmt 
+	  in Function i2s_set_fmt ..sound/soc/Plat-ti/i2s.c..
+	  in Function wmxxx4_get_fll_config 
+	  in Function wm1811_jackdet_set_mode 
+	  in Function configure_clock 
+	  in Function wmxxx4_set_dai_sysclk 
+	  in Function configure_clock 
+	  in Function i2s_set_sysclk 
+	  in Function wmxxx4_hw_params 
+	  in Function wmxxx4_set_retune_mobile 
+	  in Function wmxxx4_set_retune_mobile 
+	  in Function i2s_hw_params 
+	  in Function i2s_hw_params  ..mob =-1073735680 
+	  in Function snd_pcm_common_ioctl1 
+	  in Function snd_pcm_sw_params 
+	  in Function snd_pcm_mmap 
+	  in Function snd_pcm_common_ioctl1 
+	  in Function snd_pcm_sync_ptr 
+	  in Function snd_pcm_common_ioctl1 
+	  in Function snd_pcm_prepare 
+	  in Function snd_pcm_action_single 
+	  in Function soc_pcm_prepare 
+	  in Function snd_soc_dapm_stream_event ..sound/soc/soc-dapm.c..
+	  in Function soc_dapm_stream_event 
+	  in Function wm1811_jackdet_set_mode 
+	  in Function snd_pcm_lib_write 
+	  in Function snd_pcm_lib_write 
+	  in Function snd_pcm_action 
+	  in Function snd_pcm_action_single 
+	  in Function snd_pcm_do_start 
+	  in Function soc_pcm_trigger .. cmd=1
+	  in Function i2s_trigger .. CMD=1 
+	  in Function config_setup 
+	   in Function config_setup ..sound/soc/Plat-ti/i2s.c..
+	  in Function is_slave 
+	  in Function snd_pcm_lib_write 
+	  in Function snd_pcm_lib_write 
+
