@@ -1,74 +1,124 @@
-Sample Project: "HelloCMakeApp"
-📁 Project Structure
-
-HelloCMakeApp/
-├── CMakeLists.txt
-├── include/
-│   └── hello.h
-├── src/
-│   └── hello.cpp
-└── main.cpp
-📄 1. CMakeLists.txt
-cmake
-
-cmake_minimum_required(VERSION 3.15)
-project(HelloCMakeApp VERSION 1.0 LANGUAGES CXX)
-
-# C++ standard
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-# Include directory
-include_directories(include)
-
-# Source files
-add_executable(hello_app
-    main.cpp
-    src/hello.cpp
-)
-📄 2. main.cpp
-cpp
-Copy
-Edit
-#include "hello.h"
-
-int main() {
-    say_hello();
-    return 0;
-}
-📄 3. include/hello.h
-cpp
-
-#ifndef HELLO_H
-#define HELLO_H
-
-void say_hello();
-
-#endif
-📄 4. src/hello.cpp
-cpp
-Copy
-Edit
-#include <iostream>
-#include "hello.h"
-
-void say_hello() {
-    std::cout << "Hello from CMake project!" << std::endl;
-}
-🚀 Build & Run Instructions (Command Line)
+Setting Up Phabricator with Docker & WSL Ubuntu (Simplified Installation)
+Step-by-Step Instructions:
 bash
+# 1. Install prerequisites (WSL Ubuntu)
+sudo apt update && sudo apt upgrade -y
+sudo apt install docker.io docker-compose git -y
+sudo systemctl enable --now docker
 
-cd HelloCMakeApp
-mkdir build && cd build
-cmake ..
-cmake --build .
-./hello_app    # On Linux/Mac
-hello_app.exe  # On Windows
-🎯 Build & Run in Visual Studio
-Open Visual Studio.
+# 2. Clone repository and launch
+git clone https://github.com/phacility/phabricator.git
+cd phabricator
+docker-compose up -d
+Verification & Usage:
+Check running containers:
 
-Click File → Open → CMake... and select the HelloCMakeApp folder.
+bash
+docker-compose ps
+Expected output:
 
-Set hello_app as the startup target.
+text
+Name                Command               State          Ports
+------------------------------------------------------------------
+phabricator_app     /bin/sh -c /app/init.sh   Up      80/tcp, 443/tcp
+phabricator_db      docker-entrypoint.sh mysqld   Up      3306/tcp
+phabricator_cache   docker-entrypoint.sh redis ...   Up      6379/tcp
+Access Phabricator:
 
-Click Ctrl + F5 to run.
+Open browser to: http://localhost
+
+Default admin credentials:
+
+Username: admin
+
+Password: admin (change immediately after login)
+
+Configure services:
+
+bash
+# Access application container
+docker-compose exec app /bin/bash
+
+# Inside container:
+cd /app/phabricator
+./bin/config set phabricator.base-uri 'http://localhost'
+./bin/storage upgrade --force
+Key Components in Docker Setup:
+Service	Port	Function	Data Volume
+app	80/443	Phabricator web interface	./phabricator
+db	3306	MySQL database	./mysql
+cache	6379	Redis for caching	./redis
+Troubleshooting:
+bash
+# View logs:
+docker-compose logs -f
+
+# Common issues:
+# 1. Port conflict: Change ports in docker-compose.yml
+# 2. Permission errors: Run `sudo chmod -R 777 volumes/`
+# 3. Email setup: Configure SMTP in web UI (Admin > Config > Mail)
+Alternative: Bare Metal Installation (For Production)
+bash
+# On Ubuntu 22.04
+sudo apt install mysql-server php apache2 git
+git clone https://github.com/phacility/phabricator.git
+cd phabricator
+./bin/config set mysql.host localhost
+./bin/storage upgrade
+Access Points After Installation:
+Phabricator: http://localhost
+
+Database: mysql -u root -p (password in docker-compose.yml)
+
+Files: cd phabricator/phabricator/conf/local/
+
+Maintenance Commands:
+bash
+# Update Phabricator:
+docker-compose down
+git pull origin stable
+docker-compose build --no-cache
+docker-compose up -d
+
+# Backup database:
+docker-compose exec db mysqldump -u root -p"ROOT_PASSWORD" --all-databases > backup.sql
+Real-World Deployment Example:
+Diagram
+Code
+
+
+
+
+
+
+
+
+
+Key Advantages:
+
+Isolation: Each service in separate container
+
+Portability: Same setup works on Windows/macOS/Linux
+
+Version Control: docker-compose.yml tracks configuration
+
+Rapid Reset: Rebuild from scratch in <5 minutes
+
+Limitations:
+
+Not suitable for large teams (use Kubernetes for production)
+
+Default config insecure (change passwords immediately)
+
+Requires Docker knowledge for advanced customization
+
+💡 Pro Tip: For production use, add:
+
+HTTPS reverse proxy (Nginx)
+
+Regular database backups
+
+Monitoring with Prometheus/Grafana
+
+Separate storage volumes for uploads
+
